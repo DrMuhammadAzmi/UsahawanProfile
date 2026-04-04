@@ -1,0 +1,1570 @@
+<!DOCTYPE html><html lang="ms"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Mendalam: Profil Usahawan 360°</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .progress-bar {
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .question-card {
+            display: none;
+        }
+        .question-card.active {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .option-btn {
+            transition: all 0.2s ease;
+        }
+        .option-btn.selected {
+            border-color: #4f46e5;
+            background-color: #f5f3ff;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mt-12{margin-top:3rem}.mr-4{margin-right:1rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-full{height:100%}.h-3{height:0.75rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.w-3{width:0.75rem}.w-8{width:2rem}.max-w-3xl{max-width:48rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[2\.5rem\]{border-radius:2.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-t{border-top-width:1px}.border-amber-100{--tw-border-opacity:1;border-color:rgb(254 243 199 / var(--tw-border-opacity, 1))}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-50{--tw-border-opacity:1;border-color:rgb(249 250 251 / var(--tw-border-opacity, 1))}.border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-purple-200{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-500{--tw-bg-opacity:1;background-color:rgb(100 116 139 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.hover\:border-indigo-300:hover{--tw-border-opacity:1;border-color:rgb(165 180 252 / var(--tw-border-opacity, 1))}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-600:hover{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:p-12{padding:3rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}}</style><script defer="" data-domain="adakahsayaseorangusahawan.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script></head>
+<body class="min-h-screen py-12 px-4">
+
+    <div class="max-w-3xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Profil Usahawan 360°</h1>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto tracking-tight">Analisis 3 Dimensi: Pekerja, Peniaga, &amp; Usahawan</p>
+        </div>
+
+        <!-- Progress Container -->
+        <div id="quiz-container" class="bg-white rounded-[2.5rem] shadow-2xl p-6 md:p-12 relative overflow-hidden border border-gray-100">
+            <!-- Progress Info -->
+            <div class="flex justify-between items-center mb-6">
+                <span id="progress-text" class="text-sm font-bold text-indigo-600 uppercase tracking-widest">Senario 1 / 28</span>
+                <span id="percentage-text" class="text-sm font-medium text-gray-400">0% Selesai</span>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-100 h-2.5 rounded-full mb-10 overflow-hidden">
+                <div id="progress" class="progress-bar h-full gradient-bg rounded-full" style="width: 0%"></div>
+            </div>
+
+            <!-- Quiz Steps -->
+            <div id="questions-wrapper">
+                <!-- Questions injected by JS -->
+            <div class="question-card active">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 1</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Anda mempunyai simpanan peribadi RM30,000. Anda nampak peluang perniagaan yang memerlukan RM25,000 modal awal. Tindakan anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(0, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memilih untuk mengekalkan simpanan tersebut demi jaminan keselamatan kewangan peribadi.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(0, 'usahawan', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya melaburkan hampir keseluruhan jumlah tersebut kerana yakin dengan strategi jangka panjang yang telah dirangka.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(0, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya melaburkan sebahagian kecil (RM5,000) untuk mencuba pasaran tanpa mengganggu simpanan pokok.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(0, 'neutral', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 2</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Perniagaan anda memerlukan mesin baru RM50,000 untuk berkembang, tetapi anda tiada tunai. Apa anda buat?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(1, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya teruskan operasi sedia ada dan mengelakkan sebarang risiko komitmen kewangan baru.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(1, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengumpul keuntungan secara berperingkat sehingga mencukupi sebelum membuat pembelian.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(1, 'neutral', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(1, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memohon pembiayaan strategik atau mencari pelabur luar demi kepantasan perkembangan bisnes.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 3</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bulan ini jualan sangat merosot. Wang syarikat tidak cukup untuk bayar gaji anda sendiri. Bagaimana?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(2, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mula mempertimbangkan untuk mencari kerjaya tetap yang menawarkan pendapatan lebih stabil.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(2, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menangguhkan gaji sendiri dan menumpukan usaha keras untuk memulihkan jualan harian.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(2, 'neutral', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(2, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyuntik modal peribadi ke dalam kempen pemasaran digital bagi memacu semula momentum syarikat.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 4</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bila anda nampak trend baru (cth: AI) masuk ke pasaran, apa reaksi utama anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(3, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(3, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menunggu arahan atau panduan daripada pihak atasan/pakar sebelum mula belajar.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(3, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengkaji bagaimana teknologi tersebut boleh diintegrasikan ke dalam sistem bisnes untuk skala besar.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(3, 'peniaga', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya segera menjual produk berkaitan trend tersebut selagi ia masih viral.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 5</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda menguruskan rekod keuntungan perniagaan anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(4, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(4, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya sekadar memastikan gaji saya dibayar tepat pada waktunya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(4, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya merekodkan setiap aliran tunai keluar masuk secara manual dalam buku kira-kira.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(4, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menggunakan perisian pengurusan untuk menganalisis unjuran dan prestasi kewangan strategik.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 6</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Jika anda ingin bercuti selama 2 minggu tanpa sebarang telefon, apa yang berlaku pada bisnes?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(5, 'usahawan', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Perniagaan berjalan lancar kerana sistem dan pasukan saya sudah beroperasi secara autonomi.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(5, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya berhak mendapat cuti dan tugasan saya akan dilakukan oleh orang lain jika disuruh.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(5, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Operasi akan terganggu atau menjadi kelam-kabut tanpa pantauan harian saya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(5, 'neutral', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 7</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda melayan aduan pelanggan yang menuntut ganti rugi?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(6, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(6, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memberikan ganti rugi segera secara peribadi demi memelihara reputasi kedai.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(6, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyelesaikan aduan dan menganalisa puncanya untuk membaiki sistem operasi secara kekal.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(6, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyerahkan urusan tersebut kepada bahagian khidmat pelanggan mengikut arahan SOP.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 8</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Apakah matlamat utama perniagaan anda untuk 3 tahun akan datang?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(7, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(7, 'usahawan', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Membangunkan model perniagaan yang boleh diskalakan ke peringkat nasional atau global.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(7, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Mempunyai kedai yang lebih besar dan keuntungan harian yang lebih tinggi.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(7, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Mengekalkan pekerjaan yang stabil dan faedah yang baik untuk diri sendiri.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 9</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bila berlaku kenaikan harga bahan mentah, apa tindakan spontan anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(8, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(8, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menaikkan harga jualan serta-merta bagi mengekalkan margin untung harian.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(8, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mencari alternatif bahan atau mengoptimasi proses kerja untuk mengurangkan pembaziran.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(8, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memaklumkan kepada pihak pengurusan dan menunggu keputusan baru.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 10</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda memilih kakitangan baru untuk menyertai anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(9, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengutamakan mereka yang mempunyai hubungan baik atau rujukan keluarga terdekat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(9, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(9, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mencari individu yang mempunyai kepakaran teknikal yang jauh lebih hebat daripada saya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(9, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya pilih mereka yang rajin bekerja dan tidak banyak bertanya tentang strategi.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 11</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda melihat waktu bekerja dalam satu hari?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(10, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(10, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya lebih selesa dengan waktu bekerja yang tetap (9-5) bagi menjamin kualiti hidup.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(10, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya bekerja lebih masa secara manual asalkan ia membuahkan hasil jualan segera.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(10, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya bekerja mengikut keperluan pencapaian sasaran, tanpa terikat pada jam tertentu.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 12</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Berapa banyak masa anda luangkan untuk mengkaji pesaing?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(11, 'usahawan', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menganalisis kelemahan sistem mereka untuk menawarkan nilai unik yang berbeza.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(11, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memantau harga jualan mereka supaya tawaran saya kekal murah.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(11, 'pekerja', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Hampir sifar, saya hanya melakukan tugas harian saya dengan terbaik.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(11, 'neutral', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 13</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda menguruskan masa harian anda sebagai ketua?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(12, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(12, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyusun jadual harian dan berusaha menyelesaikan setiap satu tugasan harian.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(12, 'pekerja', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya melaksanakan tugas mengikut senarai arahan atau senarai semak sedia ada.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(12, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengutamakan aktiviti strategik yang memberikan impak 80% kepada pertumbuhan bisnes.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 14</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bila produk anda gagal dijual di pasaran, apa reaksi anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(13, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengadakan jualan lelong besar-besaran untuk mendapatkan semula modal pusingan.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(13, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menganggap ini adalah kesalahan strategi pemasaran syarikat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(13, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya membuat post-mortem data pelanggan untuk merangka semula strategi penawaran baru.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(13, 'neutral', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 15</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Apakah definisi 'Risiko' bagi anda secara peribadi?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(14, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Sesuatu yang merbahaya dan patut dielakkan demi keselamatan hidup.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(14, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Satu perjudian atau nasib yang perlu dihadapi untuk mendapat untung.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(14, 'neutral', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(14, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Satu ketidakpastian yang boleh diurus dan dikira melalui strategi data.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 16</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda melihat peranan Media Sosial dalam perniagaan?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(15, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(15, 'usahawan', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Alat pengumpulan data dan pengiklanan berbayar yang disasarkan secara tepat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(15, 'pekerja', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Platform untuk bersosial dan melihat perkembangan rakan-rakan sekerja.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(15, 'peniaga', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Platform untuk memaparkan gambar produk bagi memudahkan orang membeli.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 17</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Jika staf paling hebat anda berhenti kerja secara tiba-tiba:</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(16, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(16, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya berasa stres kerana saya perlu kembali melakukan kerja teknikal secara manual.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(16, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Sistem tetap stabil kerana semua proses kerja telah didokumentasikan dalam SOP syarikat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(16, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya berasa bimbang kerana beban kerja saya akan bertambah secara mendadak.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 18</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Pandangan anda tentang teknologi Kecerdasan Buatan (AI) hari ini?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(17, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Ia adalah ancaman yang mungkin akan menggantikan peranan kerja saya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(17, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Ia adalah alat canggih yang menarik namun saya belum bersedia melabur ke arahnya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(17, 'neutral', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(17, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Ia adalah pemecut produktiviti yang wajib diserapkan ke dalam setiap proses kerja syarikat.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 19</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Apa fokus utama anda semasa berbual dengan seorang mentor?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(18, 'usahawan', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengharapkan kritikan tajam tentang kelemahan model perniagaan saya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(18, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(18, 'pekerja', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mencari kata-kata semangat dan jaminan kestabilan kerjaya.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(18, 'peniaga', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mencari teknik praktikal untuk meningkatkan jualan harian dengan pantas.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 20</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda mengukur kejayaan prestasi bulanan?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(19, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Apabila saya berjaya menyelesaikan semua tugasan yang diberikan oleh ketua.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(19, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(19, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Apabila jumlah jualan keseluruhan adalah lebih tinggi berbanding bulan lepas.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(19, 'usahawan', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Apabila margin keuntungan bersih meningkat dan kos mendapatkan pelanggan semakin efisien.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 21</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Diberi RM50,000 lebihan tunai syarikat. Apa tindakan anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(20, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyimpannya dalam akaun simpanan rizab demi keselamatan masa depan.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(20, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(20, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya melaburkannya ke dalam penyelidikan produk baru atau kempen penguasaan pasaran baru.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(20, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya mengharapkan sebahagian daripadanya diberikan sebagai bonus tahunan.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 22</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Sejauh mana penglibatan anda dalam tugas fizikal (hantar stok, bungkus barang)?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(21, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya melakukannya sendiri bagi menjamin kualiti dan menjimatkan kos upah.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(21, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(21, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menyerahkan tugasan ini sepenuhnya kepada pasukan supaya saya boleh fokus pada pertumbuhan bisnes.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(21, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya lebih suka melakukan tugasan fizikal ini kerana ia membuatkan saya rasa produktif.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 23</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Apa kriteria paling penting sebelum melancarkan satu produk baru?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(22, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Produk tersebut mestilah mempunyai harga yang paling kompetitif di pasaran.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(22, 'usahawan', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Produk tersebut mestilah memberikan penyelesaian sebenar kepada masalah mendesak pelanggan.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(22, 'neutral', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(22, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Produk tersebut mestilah mudah untuk dihasilkan tanpa membebankan kerja saya.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 24</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Bagaimana anda menangani tekanan stres di tempat kerja?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(23, 'pekerja', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tinggalkan situasi tersebut seketika dan mencari ketenangan di tempat lain.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(23, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(23, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menganalisis punca ketegangan tersebut dan mendelegasikan tugas yang berkaitan.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(23, 'peniaga', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya memaksa diri untuk bekerja lebih keras lagi sehingga masalah selesai.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 25</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Pandangan anda tentang kemudahan pinjaman bank untuk perniagaan?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(24, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(24, 'pekerja', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Satu liabiliti yang menakutkan dan patut dielakkan seboleh mungkin.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(24, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Satu 'leverage' strategik untuk mempercepatkan pertumbuhan perniagaan skala besar.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(24, 'peniaga', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Satu bebanan yang memberikan saya tekanan mental setiap hari.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 26</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Kualiti produk merosot bila permintaan naik mendadak. Reaksi anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(25, 'neutral', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(25, 'peniaga', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya akan mengupah lebih ramai tenaga kerja sementara dengan segera.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(25, 'usahawan', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya akan membina sistem kawalan kualiti (QC) dan audit yang lebih ketat terhadap aliran kerja.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(25, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya akan bekerja lebih masa untuk memastikan setiap unit adalah berkualiti.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 27</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Jualan jatuh 50% secara tiba-tiba tanpa sebab jelas. Tindakan anda?</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(26, 'usahawan', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya menghubungi pelanggan sedia ada untuk mengenalpasti perubahan keperluan mereka.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(26, 'neutral', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(26, 'peniaga', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya segera menjalankan promosi jualan murah untuk mengurangkan kerugian.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(26, 'pekerja', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya bersabar dan menanti arahan baru daripada pengurusan atasan.</span>
+                            </button>
+                        
+                    </div>
+                </div><div class="question-card ">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario 28</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">Dalam sesi mesyuarat mingguan, anda lebih suka:</h3>
+                    <div class="space-y-4">
+                        
+                            <button type="button" onclick="handleAnswer(27, 'peniaga', 0)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Memberikan cadangan praktikal untuk meningkatkan jualan dalam tempoh singkat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(27, 'usahawan', 1)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Menetapkan objektif strategik jangka panjang dan memantau pencapaian KPI syarikat.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(27, 'pekerja', 2)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Mendengar arahan dengan teliti dan melaksanakan tugasan yang telah dipersetujui.</span>
+                            </button>
+                        
+                            <button type="button" onclick="handleAnswer(27, 'neutral', 3)" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.</span>
+                            </button>
+                        
+                    </div>
+                </div></div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-12 pt-6 border-t border-gray-50">
+                <button type="button" id="prev-btn" class="hidden px-6 py-3 text-gray-500 font-bold hover:text-indigo-600 transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    Kembali
+                </button>
+                <div class="ml-auto">
+                    <span id="instruction-msg" class="text-xs text-indigo-400 font-medium italic">Pilih senario yang paling mendekati tindakan anda</span>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="hidden text-center">
+                <div class="mb-8">
+                    <div class="inline-flex p-5 rounded-3xl bg-indigo-50 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-black text-gray-900">Hasil Analisis Dominasi 3D</h2>
+                </div>
+
+                <!-- Triple Dimension Display -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-left">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-slate-700 uppercase tracking-wider text-xs">Indeks Pekerja</h3>
+                            <span id="score-pekerja" class="text-xl font-black text-slate-600">0%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div id="bar-pekerja" class="h-full bg-slate-500 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-4 text-left">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-blue-900 uppercase tracking-wider text-xs">Indeks Peniaga</h3>
+                            <span id="score-peniaga" class="text-xl font-black text-blue-600">0%</span>
+                        </div>
+                        <div class="w-full bg-blue-200 h-2 rounded-full overflow-hidden">
+                            <div id="bar-peniaga" class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 border border-purple-100 rounded-2xl p-4 text-left">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-purple-900 uppercase tracking-wider text-xs">Indeks Usahawan</h3>
+                            <span id="score-usahawan" class="text-xl font-black text-purple-600">0%</span>
+                        </div>
+                        <div class="w-full bg-purple-200 h-2 rounded-full overflow-hidden">
+                            <div id="bar-usahawan" class="h-full bg-purple-600 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 text-left mb-8">
+                    <h3 class="font-bold text-gray-900 mb-3 text-lg">Profil Dominan: <span id="dominance-label" class="text-indigo-600">...</span></h3>
+                    <p id="analysis-text" class="text-gray-600 leading-relaxed text-sm md:text-base"></p>
+                </div>
+
+                <div class="bg-white border-2 border-amber-100 rounded-[2rem] p-8 text-left mb-10 shadow-sm">
+                    <h3 class="font-bold text-amber-900 mb-6 flex items-center text-xl">
+                        <span class="bg-amber-100 p-2 rounded-xl mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </span>
+                        Pelan Penambahbaikan Kritikal
+                    </h3>
+                    <div id="improvements-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+                </div>
+
+                <button onclick="location.reload()" class="px-10 py-4 bg-gray-900 text-white font-bold rounded-2xl hover:bg-black transition-all">
+                    Mula Semula Penilaian
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer / Copyright -->
+        <footer class="mt-12 text-center text-gray-400 text-sm leading-relaxed">
+            <p class="  ablefocused">Copyright : Dr. Muhammad bin Dato Dr. Azmi<br>+6013 222 8527</p>
+        </footer>
+    </div>
+
+    <script>
+        const neutralOption = {t: "Saya tidak tahu / Tidak pasti bagaimana saya akan bertindak.", d: "neutral"};
+
+        const questions = [
+            { 
+                q: "Anda mempunyai simpanan peribadi RM30,000. Anda nampak peluang perniagaan yang memerlukan RM25,000 modal awal. Tindakan anda?", 
+                options: [
+                    {t: "Saya memilih untuk mengekalkan simpanan tersebut demi jaminan keselamatan kewangan peribadi.", d: "pekerja"},
+                    {t: "Saya melaburkan sebahagian kecil (RM5,000) untuk mencuba pasaran tanpa mengganggu simpanan pokok.", d: "peniaga"},
+                    {t: "Saya melaburkan hampir keseluruhan jumlah tersebut kerana yakin dengan strategi jangka panjang yang telah dirangka.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Perniagaan anda memerlukan mesin baru RM50,000 untuk berkembang, tetapi anda tiada tunai. Apa anda buat?", 
+                options: [
+                    {t: "Saya teruskan operasi sedia ada dan mengelakkan sebarang risiko komitmen kewangan baru.", d: "pekerja"},
+                    {t: "Saya mengumpul keuntungan secara berperingkat sehingga mencukupi sebelum membuat pembelian.", d: "peniaga"},
+                    {t: "Saya memohon pembiayaan strategik atau mencari pelabur luar demi kepantasan perkembangan bisnes.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bulan ini jualan sangat merosot. Wang syarikat tidak cukup untuk bayar gaji anda sendiri. Bagaimana?", 
+                options: [
+                    {t: "Saya mula mempertimbangkan untuk mencari kerjaya tetap yang menawarkan pendapatan lebih stabil.", d: "pekerja"},
+                    {t: "Saya menangguhkan gaji sendiri dan menumpukan usaha keras untuk memulihkan jualan harian.", d: "peniaga"},
+                    {t: "Saya menyuntik modal peribadi ke dalam kempen pemasaran digital bagi memacu semula momentum syarikat.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bila anda nampak trend baru (cth: AI) masuk ke pasaran, apa reaksi utama anda?", 
+                options: [
+                    {t: "Saya menunggu arahan atau panduan daripada pihak atasan/pakar sebelum mula belajar.", d: "pekerja"},
+                    {t: "Saya segera menjual produk berkaitan trend tersebut selagi ia masih viral.", d: "peniaga"},
+                    {t: "Saya mengkaji bagaimana teknologi tersebut boleh diintegrasikan ke dalam sistem bisnes untuk skala besar.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda menguruskan rekod keuntungan perniagaan anda?", 
+                options: [
+                    {t: "Saya sekadar memastikan gaji saya dibayar tepat pada waktunya.", d: "pekerja"},
+                    {t: "Saya merekodkan setiap aliran tunai keluar masuk secara manual dalam buku kira-kira.", d: "peniaga"},
+                    {t: "Saya menggunakan perisian pengurusan untuk menganalisis unjuran dan prestasi kewangan strategik.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Jika anda ingin bercuti selama 2 minggu tanpa sebarang telefon, apa yang berlaku pada bisnes?", 
+                options: [
+                    {t: "Saya berhak mendapat cuti dan tugasan saya akan dilakukan oleh orang lain jika disuruh.", d: "pekerja"},
+                    {t: "Operasi akan terganggu atau menjadi kelam-kabut tanpa pantauan harian saya.", d: "peniaga"},
+                    {t: "Perniagaan berjalan lancar kerana sistem dan pasukan saya sudah beroperasi secara autonomi.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda melayan aduan pelanggan yang menuntut ganti rugi?", 
+                options: [
+                    {t: "Saya menyerahkan urusan tersebut kepada bahagian khidmat pelanggan mengikut arahan SOP.", d: "pekerja"},
+                    {t: "Saya memberikan ganti rugi segera secara peribadi demi memelihara reputasi kedai.", d: "peniaga"},
+                    {t: "Saya menyelesaikan aduan dan menganalisa puncanya untuk membaiki sistem operasi secara kekal.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Apakah matlamat utama perniagaan anda untuk 3 tahun akan datang?", 
+                options: [
+                    {t: "Mengekalkan pekerjaan yang stabil dan faedah yang baik untuk diri sendiri.", d: "pekerja"},
+                    {t: "Mempunyai kedai yang lebih besar dan keuntungan harian yang lebih tinggi.", d: "peniaga"},
+                    {t: "Membangunkan model perniagaan yang boleh diskalakan ke peringkat nasional atau global.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bila berlaku kenaikan harga bahan mentah, apa tindakan spontan anda?", 
+                options: [
+                    {t: "Saya memaklumkan kepada pihak pengurusan dan menunggu keputusan baru.", d: "pekerja"},
+                    {t: "Saya menaikkan harga jualan serta-merta bagi mengekalkan margin untung harian.", d: "peniaga"},
+                    {t: "Saya mencari alternatif bahan atau mengoptimasi proses kerja untuk mengurangkan pembaziran.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda memilih kakitangan baru untuk menyertai anda?", 
+                options: [
+                    {t: "Saya pilih mereka yang rajin bekerja dan tidak banyak bertanya tentang strategi.", d: "pekerja"},
+                    {t: "Saya mengutamakan mereka yang mempunyai hubungan baik atau rujukan keluarga terdekat.", d: "peniaga"},
+                    {t: "Saya mencari individu yang mempunyai kepakaran teknikal yang jauh lebih hebat daripada saya.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda melihat waktu bekerja dalam satu hari?", 
+                options: [
+                    {t: "Saya lebih selesa dengan waktu bekerja yang tetap (9-5) bagi menjamin kualiti hidup.", d: "pekerja"},
+                    {t: "Saya bekerja lebih masa secara manual asalkan ia membuahkan hasil jualan segera.", d: "peniaga"},
+                    {t: "Saya bekerja mengikut keperluan pencapaian sasaran, tanpa terikat pada jam tertentu.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Berapa banyak masa anda luangkan untuk mengkaji pesaing?", 
+                options: [
+                    {t: "Hampir sifar, saya hanya melakukan tugas harian saya dengan terbaik.", d: "pekerja"},
+                    {t: "Saya memantau harga jualan mereka supaya tawaran saya kekal murah.", d: "peniaga"},
+                    {t: "Saya menganalisis kelemahan sistem mereka untuk menawarkan nilai unik yang berbeza.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda menguruskan masa harian anda sebagai ketua?", 
+                options: [
+                    {t: "Saya melaksanakan tugas mengikut senarai arahan atau senarai semak sedia ada.", d: "pekerja"},
+                    {t: "Saya menyusun jadual harian dan berusaha menyelesaikan setiap satu tugasan harian.", d: "peniaga"},
+                    {t: "Saya mengutamakan aktiviti strategik yang memberikan impak 80% kepada pertumbuhan bisnes.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bila produk anda gagal dijual di pasaran, apa reaksi anda?", 
+                options: [
+                    {t: "Saya menganggap ini adalah kesalahan strategi pemasaran syarikat.", d: "pekerja"},
+                    {t: "Saya mengadakan jualan lelong besar-besaran untuk mendapatkan semula modal pusingan.", d: "peniaga"},
+                    {t: "Saya membuat post-mortem data pelanggan untuk merangka semula strategi penawaran baru.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Apakah definisi 'Risiko' bagi anda secara peribadi?", 
+                options: [
+                    {t: "Sesuatu yang merbahaya dan patut dielakkan demi keselamatan hidup.", d: "pekerja"},
+                    {t: "Satu perjudian atau nasib yang perlu dihadapi untuk mendapat untung.", d: "peniaga"},
+                    {t: "Satu ketidakpastian yang boleh diurus dan dikira melalui strategi data.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda melihat peranan Media Sosial dalam perniagaan?", 
+                options: [
+                    {t: "Platform untuk bersosial dan melihat perkembangan rakan-rakan sekerja.", d: "pekerja"},
+                    {t: "Platform untuk memaparkan gambar produk bagi memudahkan orang membeli.", d: "peniaga"},
+                    {t: "Alat pengumpulan data dan pengiklanan berbayar yang disasarkan secara tepat.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Jika staf paling hebat anda berhenti kerja secara tiba-tiba:", 
+                options: [
+                    {t: "Saya berasa bimbang kerana beban kerja saya akan bertambah secara mendadak.", d: "pekerja"},
+                    {t: "Saya berasa stres kerana saya perlu kembali melakukan kerja teknikal secara manual.", d: "peniaga"},
+                    {t: "Sistem tetap stabil kerana semua proses kerja telah didokumentasikan dalam SOP syarikat.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Pandangan anda tentang teknologi Kecerdasan Buatan (AI) hari ini?", 
+                options: [
+                    {t: "Ia adalah ancaman yang mungkin akan menggantikan peranan kerja saya.", d: "pekerja"},
+                    {t: "Ia adalah alat canggih yang menarik namun saya belum bersedia melabur ke arahnya.", d: "peniaga"},
+                    {t: "Ia adalah pemecut produktiviti yang wajib diserapkan ke dalam setiap proses kerja syarikat.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Apa fokus utama anda semasa berbual dengan seorang mentor?", 
+                options: [
+                    {t: "Saya mencari kata-kata semangat dan jaminan kestabilan kerjaya.", d: "pekerja"},
+                    {t: "Saya mencari teknik praktikal untuk meningkatkan jualan harian dengan pantas.", d: "peniaga"},
+                    {t: "Saya mengharapkan kritikan tajam tentang kelemahan model perniagaan saya.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda mengukur kejayaan prestasi bulanan?", 
+                options: [
+                    {t: "Apabila saya berjaya menyelesaikan semua tugasan yang diberikan oleh ketua.", d: "pekerja"},
+                    {t: "Apabila jumlah jualan keseluruhan adalah lebih tinggi berbanding bulan lepas.", d: "peniaga"},
+                    {t: "Apabila margin keuntungan bersih meningkat dan kos mendapatkan pelanggan semakin efisien.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Diberi RM50,000 lebihan tunai syarikat. Apa tindakan anda?", 
+                options: [
+                    {t: "Saya mengharapkan sebahagian daripadanya diberikan sebagai bonus tahunan.", d: "pekerja"},
+                    {t: "Saya menyimpannya dalam akaun simpanan rizab demi keselamatan masa depan.", d: "peniaga"},
+                    {t: "Saya melaburkannya ke dalam penyelidikan produk baru atau kempen penguasaan pasaran baru.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Sejauh mana penglibatan anda dalam tugas fizikal (hantar stok, bungkus barang)?", 
+                options: [
+                    {t: "Saya lebih suka melakukan tugasan fizikal ini kerana ia membuatkan saya rasa produktif.", d: "pekerja"},
+                    {t: "Saya melakukannya sendiri bagi menjamin kualiti dan menjimatkan kos upah.", d: "peniaga"},
+                    {t: "Saya menyerahkan tugasan ini sepenuhnya kepada pasukan supaya saya boleh fokus pada pertumbuhan bisnes.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Apa kriteria paling penting sebelum melancarkan satu produk baru?", 
+                options: [
+                    {t: "Produk tersebut mestilah mudah untuk dihasilkan tanpa membebankan kerja saya.", d: "pekerja"},
+                    {t: "Produk tersebut mestilah mempunyai harga yang paling kompetitif di pasaran.", d: "peniaga"},
+                    {t: "Produk tersebut mestilah memberikan penyelesaian sebenar kepada masalah mendesak pelanggan.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Bagaimana anda menangani tekanan stres di tempat kerja?", 
+                options: [
+                    {t: "Saya tinggalkan situasi tersebut seketika dan mencari ketenangan di tempat lain.", d: "pekerja"},
+                    {t: "Saya memaksa diri untuk bekerja lebih keras lagi sehingga masalah selesai.", d: "peniaga"},
+                    {t: "Saya menganalisis punca ketegangan tersebut dan mendelegasikan tugas yang berkaitan.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Pandangan anda tentang kemudahan pinjaman bank untuk perniagaan?", 
+                options: [
+                    {t: "Satu liabiliti yang menakutkan dan patut dielakkan seboleh mungkin.", d: "pekerja"},
+                    {t: "Satu bebanan yang memberikan saya tekanan mental setiap hari.", d: "peniaga"},
+                    {t: "Satu 'leverage' strategik untuk mempercepatkan pertumbuhan perniagaan skala besar.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Kualiti produk merosot bila permintaan naik mendadak. Reaksi anda?", 
+                options: [
+                    {t: "Saya akan bekerja lebih masa untuk memastikan setiap unit adalah berkualiti.", d: "pekerja"},
+                    {t: "Saya akan mengupah lebih ramai tenaga kerja sementara dengan segera.", d: "peniaga"},
+                    {t: "Saya akan membina sistem kawalan kualiti (QC) dan audit yang lebih ketat terhadap aliran kerja.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Jualan jatuh 50% secara tiba-tiba tanpa sebab jelas. Tindakan anda?", 
+                options: [
+                    {t: "Saya bersabar dan menanti arahan baru daripada pengurusan atasan.", d: "pekerja"},
+                    {t: "Saya segera menjalankan promosi jualan murah untuk mengurangkan kerugian.", d: "peniaga"},
+                    {t: "Saya menghubungi pelanggan sedia ada untuk mengenalpasti perubahan keperluan mereka.", d: "usahawan"},
+                    neutralOption
+                ]
+            },
+            { 
+                q: "Dalam sesi mesyuarat mingguan, anda lebih suka:", 
+                options: [
+                    {t: "Mendengar arahan dengan teliti dan melaksanakan tugasan yang telah dipersetujui.", d: "pekerja"},
+                    {t: "Memberikan cadangan praktikal untuk meningkatkan jualan dalam tempoh singkat.", d: "peniaga"},
+                    {t: "Menetapkan objektif strategik jangka panjang dan memantau pencapaian KPI syarikat.", d: "usahawan"},
+                    neutralOption
+                ]
+            }
+        ];
+
+        let currentStep = 0;
+        let selectedDimensions = new Array(questions.length).fill(null);
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function init() {
+            const wrapper = document.getElementById('questions-wrapper');
+            questions.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = `question-card ${index === 0 ? 'active' : ''}`;
+                
+                const shuffledOptions = shuffleArray([...item.options]);
+
+                div.innerHTML = `
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Senario ${index + 1}</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">${item.q}</h3>
+                    <div class="space-y-4">
+                        ${shuffledOptions.map((opt, oIdx) => `
+                            <button type="button" onclick="handleAnswer(${index}, '${opt.d}', ${oIdx})" class="option-btn w-full flex items-center p-5 border-2 border-gray-100 rounded-2xl text-left hover:border-indigo-300 hover:bg-indigo-50 group">
+                                <div class="w-8 h-8 rounded-full border-2 border-gray-200 flex-shrink-0 flex items-center justify-center mr-4 group-hover:border-indigo-500 transition-colors">
+                                    <div class="w-3 h-3 rounded-full bg-indigo-600 opacity-0 transition-opacity bullet-inner"></div>
+                                </div>
+                                <span class="text-gray-700 font-medium">${opt.t}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+                wrapper.appendChild(div);
+            });
+            updateUI();
+        }
+
+        window.handleAnswer = (qIdx, dimension, oIdx) => {
+            selectedDimensions[qIdx] = dimension;
+            const card = document.querySelectorAll('.question-card')[qIdx];
+            const btns = card.querySelectorAll('.option-btn');
+            btns.forEach((btn, idx) => {
+                const bullet = btn.querySelector('.bullet-inner');
+                if (idx === oIdx) {
+                    btn.classList.add('selected');
+                    bullet.classList.remove('opacity-0');
+                } else {
+                    btn.classList.remove('selected');
+                    bullet.classList.add('opacity-0');
+                }
+            });
+            if (currentStep < questions.length - 1) {
+                setTimeout(navigateNext, 300);
+            } else {
+                setTimeout(showResults, 500);
+            }
+        };
+
+        function navigateNext() {
+            document.querySelectorAll('.question-card')[currentStep].classList.remove('active');
+            currentStep++;
+            document.querySelectorAll('.question-card')[currentStep].classList.add('active');
+            updateUI();
+        }
+
+        document.getElementById('prev-btn').onclick = () => {
+            document.querySelectorAll('.question-card')[currentStep].classList.remove('active');
+            currentStep--;
+            document.querySelectorAll('.question-card')[currentStep].classList.add('active');
+            updateUI();
+        };
+
+        function updateUI() {
+            const total = questions.length;
+            const perc = Math.round((currentStep / (total - 1)) * 100);
+            document.getElementById('progress').style.width = `${perc}%`;
+            document.getElementById('progress-text').innerText = `Senario ${currentStep + 1} / ${total}`;
+            document.getElementById('percentage-text').innerText = `${perc}% Selesai`;
+            document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 0);
+        }
+
+        function showResults() {
+            document.getElementById('quiz-container').classList.add('p-8');
+            document.getElementById('questions-wrapper').classList.add('hidden');
+            document.getElementById('prev-btn').classList.add('hidden');
+            document.getElementById('instruction-msg').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+
+            const count = (dim) => selectedDimensions.filter(d => d === dim).length;
+            const total = questions.length;
+
+            const percPekerja = Math.round((count('pekerja') / total) * 100);
+            const percPeniaga = Math.round((count('peniaga') / total) * 100);
+            const percUsahawan = Math.round((count('usahawan') / total) * 100);
+
+            document.getElementById('score-pekerja').innerText = `${percPekerja}%`;
+            document.getElementById('score-peniaga').innerText = `${percPeniaga}%`;
+            document.getElementById('score-usahawan').innerText = `${percUsahawan}%`;
+            document.getElementById('bar-pekerja').style.width = `${percPekerja}%`;
+            document.getElementById('bar-peniaga').style.width = `${percPeniaga}%`;
+            document.getElementById('bar-usahawan').style.width = `${percUsahawan}%`;
+
+            let dominance = "", analysis = "", imps = [];
+            const maxVal = Math.max(percUsahawan, percPeniaga, percPekerja);
+
+            if (maxVal === percUsahawan && percUsahawan > 30) {
+                dominance = "Usahawan Strategik (Visionary)";
+                analysis = "Minda anda dibina untuk pertumbuhan luar biasa. Anda sangat fokus pada sistem, delegasi, dan inovasi. Anda melihat risiko kewangan sebagai pelaburan strategik untuk masa depan.";
+                imps = [
+                    {t:"Kawalan Kualiti", d:"Sistem QC anda mesti mantap bagi mengekalkan kualiti semasa anda memecut skala bisnes."},
+                    {t:"Kepimpinan Empati", d:"Sentiasa memupuk nilai kemanusiaan dalam pasukan supaya mereka tidak rasa seperti robot dalam mesin strategi anda."},
+                    {t:"Rizab Kewangan", d:"Pastikan perniagaan mempunyai dana rizab sekurang-kurangnya 6 bulan bagi menampung strategi agresif anda."}
+                ];
+            } else if (maxVal === percPeniaga && percPeniaga > 30) {
+                dominance = "Peniaga Cekap (Operator)";
+                analysis = "Pakar dalam kelancaran operasi harian. Sangat teliti dengan aliran tunai dan kualiti servis. Cabaran anda adalah melangkah ke arah skala yang lebih besar tanpa keterlibatan manual anda.";
+                imps = [
+                    {t:"Automasi Digital", d:"Mula melabur dalam sistem pengurusan digital bagi mengurangkan beban tugasan manual yang memakan masa."},
+                    {t:"Keberanian Delegasi", d:"Latih pasukan untuk buat keputusan operasi supaya anda boleh menumpukan perhatian kepada hala tuju bisnes."},
+                    {t:"Visi Masa Depan", d:"Luangkan masa khusus setiap minggu untuk merancang strategi jangka panjang syarikat, bukan sekadar jaga kedai."}
+                ];
+            } else if (maxVal === percPekerja && percPekerja > 30) {
+                dominance = "Pekerja Berdedikasi (Executor)";
+                analysis = "Sangat cemerlang dalam melaksanakan tugasan teknikal dan menghargai kestabilan. Langkah seterusnya adalah membina keberanian untuk menguruskan ketidaktentuan dunia perniagaan.";
+                imps = [
+                    {t:"Anjakan Paradigma", d:"Mula melihat setiap masalah di sekeliling anda sebagai peluang perniagaan yang bernilai tinggi."},
+                    {t:"Literasi Kewangan", d:"Fahami perbezaan antara aliran tunai harian dan modal pertumbuhan. Belajar ilmu pengurusan risiko kewangan."},
+                    {t:"Daya Tahan Mental", d:"Cuba ambil risiko dalam skala kecil untuk membina keyakinan diri dalam membuat keputusan besar."}
+                ];
+            } else {
+                dominance = "Fasa Penerokaan & Pembelajaran";
+                analysis = "Keputusan anda menunjukkan anda masih dalam fasa meneroka identiti profesional atau tidak pasti tentang tindakan strategik. Ini adalah waktu terbaik untuk menimba ilmu.";
+                imps = [
+                    {t:"Banyakkan Membaca", d:"Baca biografi usahawan dan peniaga berjaya untuk memahami pola fikir mereka dalam setiap senario."},
+                    {t:"Sertai Bengkel", d:"Hadiri bengkel pengurusan risiko dan asas perniagaan untuk membina keyakinan dalam membuat keputusan."},
+                    {t:"Eksperimen Kecil", d:"Cuba jalankan satu projek kecil (side hustle) untuk merasai sendiri tekanan dan nikmat dunia perniagaan."}
+                ];
+            }
+
+            document.getElementById('dominance-label').innerText = dominance;
+            document.getElementById('analysis-text').innerText = analysis;
+            
+            const container = document.getElementById('improvements-container');
+            container.innerHTML = "";
+            imps.forEach(imp => {
+                const div = document.createElement('div');
+                div.className = "p-5 bg-white border border-amber-50 rounded-2xl shadow-sm hover:shadow-md transition-shadow";
+                div.innerHTML = `<h4 class="font-bold text-amber-900 mb-2 uppercase text-xs tracking-widest">${imp.t}</h4><p class="text-xs text-gray-600 leading-relaxed">${imp.d}</p>`;
+                container.appendChild(div);
+            });
+        }
+
+        window.onload = init;
+    </script>
+
+</body></html>
